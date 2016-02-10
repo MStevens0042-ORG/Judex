@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.matthew.judex.MainActivity"
-    android:background="@drawable/background">
+    android:background="#ffffff">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -18,15 +18,17 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#006064"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Judex"
-                android:textColor="#000000"
-                android:textSize="12pt"/>
+                android:text="— Judex —"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"/>
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
