@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="327f967613fbd3158a3e925b23481ffa84d2fe12">
+        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_85ea0dbfc0e70e8ed7d3221f03d130f692c5520d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_4c8b33e7182a487916a847574f21e9023ee046b9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_0686f2762172d1b97caf48241c86e25bea9946ee.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_e869e058ef41f17fdbb2085de6b1060413850602.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4d831af34a556133ca4c59f383269a4650bd5e27">
+        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_60a408b49b49ce3e077ea110d3278d80616b3e10\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_192fd8508a1fd06b1fae06b1af3e1afb65f96cc5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_4b0463350957a5d5728462b1f0319169842ba47f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7f8307f0713e5014b6a632add2ff24ca1431ee81">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\instant-run_1e209112e9cea34eb2e5d131dc4729c9cfab974e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_8f4380acfe564265100591cfe319263e3feae1b1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\incremental-classes\debug\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0d1c38b76ed9649959fb0bc8fd1c17092655515a">
+        <dex dex="C:\Users\Matthew\AndroidStudioProjects\Judex\app\build\intermediates\pre-dexed\debug\classes_76510b3b7edc47204f7a66cb67ed7a5397e741f7.jar" />
+    </item>
+
+</items>
