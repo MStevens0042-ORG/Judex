@@ -24,15 +24,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ddf6a3-0550-4985-9a90-83d282774df1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/notification_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/Receiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/Receiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
     </list>
     <ignored path="Judex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Receiver.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Receiver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/Receiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7258065">
+            <state vertical-scroll-proportion="0.0">
               <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -107,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content_main.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content_main.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-57.8">
-              <caret line="264" column="40" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
+            <state vertical-scroll-proportion="3.6163023">
+              <caret line="298" column="44" selection-start-line="298" selection-start-column="44" selection-end-line="298" selection-end-column="44" />
               <folding>
                 <element signature="e#388#421#0" expanded="true" />
                 <element signature="e#446#481#0" expanded="true" />
@@ -129,13 +122,6 @@
                 <element signature="e#8526#8559#0" expanded="true" />
                 <element signature="e#8595#8628#0" expanded="true" />
                 <element signature="e#8665#8698#0" expanded="true" />
-                <element signature="e#12167#12200#0" expanded="true" />
-                <element signature="e#12232#12265#0" expanded="true" />
-                <element signature="e#13182#13215#0" expanded="true" />
-                <element signature="e#13251#13284#0" expanded="true" />
-                <element signature="e#13321#13354#0" expanded="true" />
-                <element signature="e#13660#13693#0" expanded="true" />
-                <element signature="e#13730#13763#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1736,9 +1722,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/ContactFilterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/Receiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
       </list>
     </option>
   </component>
@@ -2228,7 +2214,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455425801813</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finish first draft of quiet hours, text filter, notifications">
+      <created>1455431379065</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1455431379065</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2324,7 +2316,8 @@
     <MESSAGE value="re" />
     <MESSAGE value="started on receiving sms" />
     <MESSAGE value="started on textfilter" />
-    <option name="LAST_COMMIT_MESSAGE" value="started on textfilter" />
+    <MESSAGE value="finish first draft of quiet hours, text filter, notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish first draft of quiet hours, text filter, notifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2363,13 +2356,6 @@
             <element signature="e#8526#8559#0" expanded="true" />
             <element signature="e#8595#8628#0" expanded="true" />
             <element signature="e#8665#8698#0" expanded="true" />
-            <element signature="e#12167#12200#0" expanded="true" />
-            <element signature="e#12232#12265#0" expanded="true" />
-            <element signature="e#13182#13215#0" expanded="true" />
-            <element signature="e#13251#13284#0" expanded="true" />
-            <element signature="e#13321#13354#0" expanded="true" />
-            <element signature="e#13660#13693#0" expanded="true" />
-            <element signature="e#13730#13763#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2485,13 +2471,6 @@
             <element signature="e#8526#8559#0" expanded="true" />
             <element signature="e#8595#8628#0" expanded="true" />
             <element signature="e#8665#8698#0" expanded="true" />
-            <element signature="e#12167#12200#0" expanded="true" />
-            <element signature="e#12232#12265#0" expanded="true" />
-            <element signature="e#13182#13215#0" expanded="true" />
-            <element signature="e#13251#13284#0" expanded="true" />
-            <element signature="e#13321#13354#0" expanded="true" />
-            <element signature="e#13660#13693#0" expanded="true" />
-            <element signature="e#13730#13763#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2590,13 +2569,6 @@
             <element signature="e#8526#8559#0" expanded="true" />
             <element signature="e#8595#8628#0" expanded="true" />
             <element signature="e#8665#8698#0" expanded="true" />
-            <element signature="e#12167#12200#0" expanded="true" />
-            <element signature="e#12232#12265#0" expanded="true" />
-            <element signature="e#13182#13215#0" expanded="true" />
-            <element signature="e#13251#13284#0" expanded="true" />
-            <element signature="e#13321#13354#0" expanded="true" />
-            <element signature="e#13660#13693#0" expanded="true" />
-            <element signature="e#13730#13763#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2850,41 +2822,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.8">
-          <caret line="264" column="40" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
-          <folding>
-            <element signature="e#388#421#0" expanded="true" />
-            <element signature="e#446#481#0" expanded="true" />
-            <element signature="e#507#542#0" expanded="true" />
-            <element signature="e#566#599#0" expanded="true" />
-            <element signature="e#624#664#0" expanded="true" />
-            <element signature="e#3276#3309#0" expanded="true" />
-            <element signature="e#3341#3374#0" expanded="true" />
-            <element signature="e#3407#3440#0" expanded="true" />
-            <element signature="e#7804#7837#0" expanded="true" />
-            <element signature="e#7870#7905#0" expanded="true" />
-            <element signature="e#7939#7974#0" expanded="true" />
-            <element signature="e#8006#8039#0" expanded="true" />
-            <element signature="e#8072#8112#0" expanded="true" />
-            <element signature="e#8526#8559#0" expanded="true" />
-            <element signature="e#8595#8628#0" expanded="true" />
-            <element signature="e#8665#8698#0" expanded="true" />
-            <element signature="e#12167#12200#0" expanded="true" />
-            <element signature="e#12232#12265#0" expanded="true" />
-            <element signature="e#13182#13215#0" expanded="true" />
-            <element signature="e#13251#13284#0" expanded="true" />
-            <element signature="e#13321#13354#0" expanded="true" />
-            <element signature="e#13660#13693#0" expanded="true" />
-            <element signature="e#13730#13763#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2893,6 +2830,16 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/notification_icon.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/Receiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/MainActivity.java">
@@ -2916,14 +2863,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/matthew/judex/Receiver.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7258065">
-          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+        <state vertical-scroll-proportion="3.6163023">
+          <caret line="298" column="44" selection-start-line="298" selection-start-column="44" selection-end-line="298" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#388#421#0" expanded="true" />
+            <element signature="e#446#481#0" expanded="true" />
+            <element signature="e#507#542#0" expanded="true" />
+            <element signature="e#566#599#0" expanded="true" />
+            <element signature="e#624#664#0" expanded="true" />
+            <element signature="e#3276#3309#0" expanded="true" />
+            <element signature="e#3341#3374#0" expanded="true" />
+            <element signature="e#3407#3440#0" expanded="true" />
+            <element signature="e#7804#7837#0" expanded="true" />
+            <element signature="e#7870#7905#0" expanded="true" />
+            <element signature="e#7939#7974#0" expanded="true" />
+            <element signature="e#8006#8039#0" expanded="true" />
+            <element signature="e#8072#8112#0" expanded="true" />
+            <element signature="e#8526#8559#0" expanded="true" />
+            <element signature="e#8595#8628#0" expanded="true" />
+            <element signature="e#8665#8698#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
