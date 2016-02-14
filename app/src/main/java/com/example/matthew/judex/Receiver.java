@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by Matthew on 2/11/2016.
  */
@@ -13,6 +17,11 @@ public class Receiver extends BroadcastReceiver {
 
     public Receiver() {
     }
+
+    boolean isUrgent = false;
+    boolean isBlacklisted = false;
+
+    public List<String> messageList;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -27,11 +36,34 @@ public class Receiver extends BroadcastReceiver {
             Object[] pdus = (Object[]) bundle.get("pdus");
             msgs = new SmsMessage[pdus.length];
 
-            for (int i=0; i < msgs.length; i++) {
+            for (int i = 0; i < msgs.length; i++) {
                 msgs[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
                 sender += msgs[i].getOriginatingAddress();
                 message += msgs[i].getMessageBody();
-                message += "\n";
+            }
+        }
+
+        messageList = new ArrayList<String>(Arrays.asList(message.split(" ")));
+
+        for(int i = 0; i < MainActivity.getUrgentTextList().size(); i++)
+        {
+            for(int j = 0; j < messageList.size(); j++)
+            {
+                if(MainActivity.getUrgentTextList().get(i).equals(messageList.get(j)))
+                {
+                    isUrgent = true;
+                }
+            }
+        }
+
+        for(int i = 0; i < MainActivity.getBlacklistTextList().size(); i++)
+        {
+            for(int j = 0; j < messageList.size(); j++)
+            {
+                if(MainActivity.getBlacklistTextList().get(i).equals(messageList.get(j)))
+                {
+                    isBlacklisted = true;
+                }
             }
         }
     }

@@ -1,17 +1,33 @@
 package com.example.matthew.judex;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    final public EditText urgentText = (EditText) findViewById(R.id.urgentText);
+    final public EditText blacklistText = (EditText) findViewById(R.id.blacklistText);
+
+    public static List<String> urgentTextList;
+    public static List<String> getUrgentTextList()
+    {
+        return urgentTextList;
+    }
+
+    public static List<String> blacklistTextList;
+    public static List<String> getBlacklistTextList()
+    {
+        return blacklistTextList;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,31 +36,47 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        CardView quietHours = (CardView) findViewById(R.id.quietHoursCard);
-        CardView textFilter = (CardView) findViewById(R.id.textCard);
-        CardView contactFilter = (CardView) findViewById(R.id.contactCard);
 
-        quietHours.setOnClickListener(new View.OnClickListener() {
+
+        urgentText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, QuietHoursActivity.class);
-                startActivity(intent);
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    urgentTextList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
+                } else {
+                    urgentTextList.clear();}
             }
         });
 
-        textFilter.setOnClickListener(new View.OnClickListener() {
+        blacklistText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TextFilterActivity.class);
-                startActivity(intent);
-            }
-        });
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        contactFilter.setOnClickListener(new View.OnClickListener() {
+            }
+
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContactFilterActivity.class);
-                startActivity(intent);
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    blacklistTextList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
+                } else {
+                    blacklistTextList.clear();}
             }
         });
     }
