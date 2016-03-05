@@ -2,53 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\com.android.support-design-23.1.1_6b9d9f8fa6ba1980205d7692c814718695a4c31f.jar" />
+        sha1="17c10faefe88237c925521647b8d01e7aebfcfc6">
+        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_85ea0dbfc0e70e8ed7d3221f03d130f692c5520d\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_sliceb.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.1.1_0def69e57f81973e4d76f59b2adbb6dd33a8928b.jar" />
+        sha1="f62b9551243dc0372c729e66bff2975495c6d1b5">
+        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_sliceb_8292791c9f1573e21607852d30635b8bfb081ff5\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.1.1_97ef3556a0ec406b6165f59dbad5af5e931353d5.jar" />
-    </item>
-    <item
-        jar="C:\Users\Matthew\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\support-annotations-23.1.1_4c8b33e7182a487916a847574f21e9023ee046b9.jar" />
-    </item>
-    <item
-        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.1.1_2aa37f2fd47b79278ec912280eac3d0155beb506.jar" />
-    </item>
-    <item
-        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\internal_impl-23.1.1_ff21e7c65d312fe477327f0c1cd5f5826c90f016.jar" />
-    </item>
-    <item
-        jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
-        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-23.1.1_33a2882d8f49716700a8f2f38ef14ab3f1b68e36.jar" />
+        sha1="08171c01cc4542b830123049d23e56f76ad959e1">
+        <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_60a408b49b49ce3e077ea110d3278d80616b3e10\classes.dex" />
     </item>
 
 </items>
