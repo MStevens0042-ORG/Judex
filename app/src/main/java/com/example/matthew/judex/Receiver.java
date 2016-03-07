@@ -1,11 +1,15 @@
 package com.example.matthew.judex;
 
+import android.app.Notification;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +26,7 @@ public class Receiver extends BroadcastReceiver {
 
     boolean isUrgent = false;
     boolean isBlacklisted = false;
+    boolean isAutoreply = false;
 
     Calendar currentTime = Calendar.getInstance();
     int hour = currentTime.get(Calendar.HOUR_OF_DAY);
@@ -35,6 +40,11 @@ public class Receiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        IntentFilter filter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
+        filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
+        context.registerReceiver(this, filter);
+
         Bundle bundle = intent.getExtras();
 
         SmsMessage[] msgs = null;
@@ -53,7 +63,7 @@ public class Receiver extends BroadcastReceiver {
             }
         }
 
-        messageList = new ArrayList<String>(Arrays.asList(message.split(" ")));
+        messageList = new ArrayList<>(Arrays.asList(message.split(" ")));
 
         for(int i = 0; i < MainActivity.getUrgentTextList().size(); i++)
         {
@@ -70,11 +80,46 @@ public class Receiver extends BroadcastReceiver {
         {
             for(int j = 0; j < messageList.size(); j++)
             {
-                if(MainActivity.getBlacklistTextList().get(i).equals(messageList.get(j)))
+                if(MainActivity.getBlacklistTextList().get(i).equals(messageList.get(j)) && !isUrgent)
                 {
                     isBlacklisted = true;
                 }
             }
+        }
+
+        for(int i = 0; i < MainActivity.getAutoreplyTextList().size(); i++)
+        {
+            for(int j = 0; j < messageList.size(); j++)
+            {
+                if(MainActivity.getAutoreplyTextList().get(i).equals(messageList.get(j)))
+                {
+                    isAutoreply = true;
+                }
+            }
+        }
+
+        for(int i = 0; i < MainActivity.getUrgentContactList().size(); i++)
+        {
+                if(MainActivity.getUrgentContactList().get(i).equals(sender))
+                {
+                    isUrgent = true;
+                }
+        }
+
+        for(int i = 0; i < MainActivity.getBlacklistContactList().size(); i++)
+        {
+                if(MainActivity.getBlacklistContactList().get(i).equals(sender) && !isUrgent)
+                {
+                    isBlacklisted = true;
+                }
+        }
+
+        for(int i = 0; i < MainActivity.getAutoreplyContactList().size(); i++)
+        {
+                if(MainActivity.getAutoreplyContactList().get(i).equals(sender))
+                {
+                    isAutoreply = true;
+                }
         }
 
         if(MainActivity.endTimeInt < MainActivity.startTimeInt)
@@ -96,6 +141,12 @@ public class Receiver extends BroadcastReceiver {
         } else if(!quietHours && !isBlacklisted)
         {
             main.notify(sender, message);
+        }
+
+        if(isAutoreply)
+        {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(sender, null, MainActivity.response, null, null);
         }
 
     }

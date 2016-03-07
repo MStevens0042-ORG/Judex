@@ -27,9 +27,6 @@ import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    final public EditText urgentText = (EditText) findViewById(R.id.urgentText);
-    final public EditText blacklistText = (EditText) findViewById(R.id.blacklistText);
-
     public static List<String> urgentTextList;
     public static List<String> getUrgentTextList()
     {
@@ -42,14 +39,22 @@ public class MainActivity extends AppCompatActivity {
         return blacklistTextList;
     }
 
-    final public CardView startTime = (CardView) findViewById(R.id.startTime);
-    final public TextView startTimeText = (TextView) findViewById(R.id.startTimeText);
+    public static List<String> autoreplyTextList;
+    public static List<String> getAutoreplyTextList() { return autoreplyTextList; }
 
-    final public CardView endTime = (CardView) findViewById(R.id.endTime);
-    final public TextView endTimeText = (TextView) findViewById(R.id.endTimeText);
+    public static List<String> autoreplyContactList;
+    public static List<String> getAutoreplyContactList() { return  autoreplyContactList; }
+
+    public static List<String> blacklistContactList;
+    public static List<String> getBlacklistContactList() { return blacklistContactList; }
+
+    public static List<String> urgentContactList;
+    public static List<String> getUrgentContactList() { return urgentContactList; }
 
     public static int startTimeInt;
     public static int endTimeInt;
+
+    public static String response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        final EditText urgentText = (EditText) findViewById(R.id.urgentText);
+        final EditText blacklistText = (EditText) findViewById(R.id.blacklistText);
+        final EditText autoreplyText = (EditText) findViewById(R.id.autoreplyText);
+        final EditText urgentContact = (EditText) findViewById(R.id.urgentContact);
+        final EditText blacklistContact = (EditText) findViewById(R.id.blacklistContact);
+        final EditText autoreplyContact = (EditText) findViewById(R.id.autoreplyContact);
+        final EditText autoreplyResponse = (EditText) findViewById(R.id.autoreplyResponse);
+
+        final CardView startTime = (CardView) findViewById(R.id.startTime);
+        final TextView startTimeText = (TextView) findViewById(R.id.startTimeText);
+
+        final CardView endTime = (CardView) findViewById(R.id.endTime);
+        final TextView endTimeText = (TextView) findViewById(R.id.endTimeText);
 
         startTime.setOnClickListener(new CardView.OnClickListener(){
             @Override
@@ -139,6 +158,112 @@ public class MainActivity extends AppCompatActivity {
                     blacklistTextList.clear();}
             }
         });
+
+        autoreplyText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    autoreplyTextList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
+                } else {
+                    autoreplyTextList.clear();}
+            }
+        });
+
+        urgentContact.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    urgentContactList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
+                } else {
+                    urgentContactList.clear();}
+            }
+        });
+
+        blacklistContact.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    blacklistContactList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
+                } else {
+                    blacklistContactList.clear();}
+            }
+        });
+
+        autoreplyContact.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    autoreplyContactList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
+                } else {
+                    autoreplyContactList.clear();}
+            }
+        });
+
+        autoreplyResponse.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0)
+                {
+                    response = autoreplyResponse.getText().toString();
+                } else {
+                    response = null;
+                }
+            }
+        });
     }
 
     public void notify(String sender, String text)
@@ -159,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        return false;
     }
 
     @Override
