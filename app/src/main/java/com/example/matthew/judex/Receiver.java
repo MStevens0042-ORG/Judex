@@ -41,9 +41,7 @@ public class Receiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        IntentFilter filter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
-        filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
-        context.registerReceiver(this, filter);
+        Log.i("test", " test");
 
         Bundle bundle = intent.getExtras();
 
@@ -133,14 +131,18 @@ public class Receiver extends BroadcastReceiver {
             quietHours = true;
         }
 
-        MainActivity main = new MainActivity();
-
         if(isUrgent)
         {
-            main.notify(sender, message);
+            Intent notification = new Intent("send_notification")
+                    .putExtra("sender", sender)
+                    .putExtra("message", message);
+            context.sendBroadcast(notification);;
         } else if(!quietHours && !isBlacklisted)
         {
-            main.notify(sender, message);
+            Intent notification = new Intent("send_notification")
+                    .putExtra("sender", sender)
+                    .putExtra("message", message);
+            context.sendBroadcast(notification);;
         }
 
         if(isAutoreply)
@@ -149,7 +151,8 @@ public class Receiver extends BroadcastReceiver {
             smsManager.sendTextMessage(sender, null, MainActivity.response, null, null);
         }
 
-    }
 
+
+    }
 
 }

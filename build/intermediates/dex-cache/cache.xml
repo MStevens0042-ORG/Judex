@@ -3,23 +3,23 @@
 
     <item
         jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="85e4e9bbacc9dd1be6dd1486280349571359090b">
+        sha1="5919ecc51c393f2139e36c1e7cf4cdf6bd97f5dc">
         <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_85ea0dbfc0e70e8ed7d3221f03d130f692c5520d\classes.dex" />
     </item>
     <item
         jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_sliceb.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="6250716338f4513d5d9938381088d650cd28effb">
+        sha1="67b84edfd023e091a55e9342a906c3235bd7eb2a">
         <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_sliceb_8292791c9f1573e21607852d30635b8bfb081ff5\classes.dex" />
     </item>
     <item
         jar="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="6c36c1a192157383d24aeadb2436bbb7e2518062">
+        sha1="7d50afaf0a3e55f15a4d2abe433104b713d0700f">
         <dex dex="C:\Users\Matthew\Documents\Judex\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_60a408b49b49ce3e077ea110d3278d80616b3e10\classes.dex" />
     </item>
 

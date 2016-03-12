@@ -6,6 +6,8 @@ import android.app.TimePickerDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -27,33 +29,39 @@ import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    public static List<String> urgentTextList;
+    public static List<String> urgentTextList = new ArrayList<String>(1);
     public static List<String> getUrgentTextList()
     {
         return urgentTextList;
     }
 
-    public static List<String> blacklistTextList;
+    public static List<String> blacklistTextList = new ArrayList<String>(1);
     public static List<String> getBlacklistTextList()
     {
         return blacklistTextList;
     }
 
-    public static List<String> autoreplyTextList;
+    public static List<String> autoreplyTextList = new ArrayList<String>(1);
     public static List<String> getAutoreplyTextList() { return autoreplyTextList; }
 
-    public static List<String> autoreplyContactList;
+    public static List<String> autoreplyContactList = new ArrayList<String>(1);
     public static List<String> getAutoreplyContactList() { return  autoreplyContactList; }
 
-    public static List<String> blacklistContactList;
+    public static List<String> blacklistContactList = new ArrayList<String>(1);
     public static List<String> getBlacklistContactList() { return blacklistContactList; }
 
-    public static List<String> urgentContactList;
+    public static List<String> urgentContactList = new ArrayList<String>(1);
     public static List<String> getUrgentContactList() { return urgentContactList; }
 
     public static int startTimeInt;
     public static int endTimeInt;
 
+    public static String urgentTextString;
+    public static String blacklistTextString;
+    public static String autoreplyTextString;
+    public static String autoReplyContactString;
+    public static String blacklistContactString;
+    public static String urgentContactString;
     public static String response;
 
     @Override
@@ -77,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
         final CardView endTime = (CardView) findViewById(R.id.endTime);
         final TextView endTimeText = (TextView) findViewById(R.id.endTimeText);
 
+        urgentText.setText(urgentTextString);
+        blacklistText.setText(blacklistTextString);
+        autoreplyText.setText(autoreplyTextString);
+        autoreplyContact.setText(autoReplyContactString);
+        blacklistContact.setText(blacklistContactString);
+        urgentContact.setText(urgentContactString);
+        autoreplyResponse.setText(response);
+
         startTime.setOnClickListener(new CardView.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -88,7 +104,15 @@ public class MainActivity extends AppCompatActivity {
                 setStartTime = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        startTimeText.setText(selectedHour + ":" + selectedMinute);
+                        String selectedHourString;
+                        String selectedMinuteString;
+                        if(Integer.toString(selectedHour).length() == 1){
+                            selectedHourString = "0" + selectedHour;
+                        } else { selectedHourString = Integer.toString(selectedHour);}
+                        if(Integer.toString(selectedMinute).length() == 1){
+                            selectedMinuteString = "0" + selectedMinute;
+                        } else { selectedMinuteString = Integer.toString(selectedMinute);}
+                        startTimeText.setText(selectedHourString + ":" + selectedMinuteString);
                         startTimeInt = 100 * selectedHour + selectedMinute;
                     }
                 }, hour, minute, true);
@@ -135,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
                     urgentTextList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
                 } else {
                     urgentTextList.clear();}
+                MainActivity.urgentTextString = s.toString();
             }
         });
 
@@ -156,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     blacklistTextList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
                 } else {
                     blacklistTextList.clear();}
+                MainActivity.blacklistTextString = s.toString();
             }
         });
 
@@ -177,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
                     autoreplyTextList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
                 } else {
                     autoreplyTextList.clear();}
+                MainActivity.autoreplyTextString = s.toString();
             }
         });
 
@@ -198,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
                     urgentContactList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
                 } else {
                     urgentContactList.clear();}
+                MainActivity.urgentContactString = s.toString();
             }
         });
 
@@ -219,6 +247,7 @@ public class MainActivity extends AppCompatActivity {
                     blacklistContactList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
                 } else {
                     blacklistContactList.clear();}
+                MainActivity.blacklistContactString = s.toString();
             }
         });
 
@@ -240,6 +269,7 @@ public class MainActivity extends AppCompatActivity {
                     autoreplyContactList = new ArrayList<String>(Arrays.asList(s.toString().split(",")));
                 } else {
                     autoreplyContactList.clear();}
+                MainActivity.autoReplyContactString = s.toString();
             }
         });
 
@@ -264,20 +294,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
-    public void notify(String sender, String text)
-    {
-        Notification notification  = new Notification.Builder(this)
-                .setContentTitle("New message from: " + sender)
-                .setContentText(text)
-                .setSmallIcon(R.drawable.notification_icon)
-                .setAutoCancel(true)
-                .build();
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                final String sender = intent.getExtras().getString("sender");
+                final String message = intent.getExtras().getString("message");
+                Notification notification  = new Notification.Builder(MainActivity.this)
+                        .setContentTitle("New message from: " + sender)
+                        .setContentText(message)
+                        .setSmallIcon(R.drawable.notification_icon)
+                        .setAutoCancel(true)
+                        .build();
+                NotificationManager notificationManager =
+                        (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-        notificationManager.notify(0, notification);
+                notificationManager.notify(0, notification);
+            }
+        };
+        this.registerReceiver(notificationReceiver, new IntentFilter("send_notification"));
     }
 
     @Override
